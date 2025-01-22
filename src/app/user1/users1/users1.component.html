@@ -1,0 +1,22 @@
+<p>from user1</p>
+<h1>users1 works!</h1>
+<app-users2></app-users2>
+
+<br>
+
+<div>
+    <p *ngFor="let item of objArr; index as i">
+        id: {{ item.id }} - name: {{ item.fname }} - <button (click)="removeEle(i)">remove</button>
+    </p>
+</div>
+<hr>
+<div>
+    <p *ngFor="let item of objArr; let i=index;trackBy: trackByFn;">
+        id: {{ item.id }} - name: {{ item.fname }} - <button (click)="removeEle(i)">remove</button>
+    </p>
+</div>
+
+<hr>
+
+<ng-content></ng-content>
+

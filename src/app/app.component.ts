@@ -1,12 +1,25 @@
 import { Component } from '@angular/core';
-import { RouterOutlet } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterOutlet],
+  standalone: false,
   templateUrl: './app.component.html',
   styleUrl: './app.component.css'
 })
 export class AppComponent {
-  title = 'practice-angular';
+  show: string = 'Type it'
+  shoeDiv: boolean = true;
+
+  onShow(ele: HTMLInputElement){
+    this.show = ele.value;
+  }
+
+  onDestroy(){
+    this.shoeDiv = !this.shoeDiv
+  }
 }
+
+// title = 'practice-angular';
+  // mark = 452;
+  // totalmark = 500;
+  // st = 'primary'

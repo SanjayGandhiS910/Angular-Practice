@@ -1,0 +1,37 @@
+.primary {
+    color: red;
+  }
+  .secondary {
+    color: green;
+  }
+   
+  .big {
+    font-size: 30px;
+  }
+   
+  .small {
+    font-size: 20px;
+  }
+   
+  .italics {
+    font-style: italic;
+  }
+   
+  .is-active {
+    font-weight: bolder;
+  }
+  .section {
+    margin: 10px;
+  }
+
+
+div{
+  border: 2px solid darkgray;
+  background-color: gainsboro;
+  padding: 30px;
+  text-align: center;
+}
+input,button{
+  font-size: 25px;
+  margin-right: 10px;
+}
