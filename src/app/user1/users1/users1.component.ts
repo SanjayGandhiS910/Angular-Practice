@@ -1,4 +1,6 @@
 import { Component, TrackByFunction } from '@angular/core';
+import { AppService } from '../../app.service';
+import { LoggerServie } from '../../logger.Servie';
 
 @Component({
   selector: 'app-users1',
@@ -7,14 +9,26 @@ import { Component, TrackByFunction } from '@angular/core';
   styleUrl: './users1.component.css'
 })
 export class Users1Component {
-  objArr = [
-    {id: 1, fname: 'aaaa'},
-    {id: 2, fname: 'qqqq'},
-    {id: 3, fname: 'zzzz'}
-  ]
-  trackByFn!: TrackByFunction<{ id: number; fname: string; }>;
+  userName: string = '';
+  userStatus: string = 'incomplete';
 
-  removeEle(i: number){
-    this.objArr.splice(i,1)
+  constructor(private a: AppService){
+  }
+
+  addUser(){
+    this.a.addUser(this.userName,this.userStatus)
+    //console.log(this.a.users);
   }
 }
+
+
+// objArr = [
+//   {id: 1, fname: 'aaaa'},
+//   {id: 2, fname: 'qqqq'},
+//   {id: 3, fname: 'zzzz'}
+// ]
+// trackByFn!: TrackByFunction<{ id: number; fname: string; }>;
+
+// removeEle(i: number){
+//   this.objArr.splice(i,1)
+// }

@@ -28,4 +28,21 @@
     </app-header>
     <br><br>
     <button (click)="onDestroy()">Destroy</button>
+    <br><br>
+    <button (click)="onClick()">App</button>
 </div>
+
+<div>
+    <app-users1></app-users1>
+</div>
+
+<div>
+    <table>
+        <tr *ngFor="let item of user">
+            <td>{{ item.name }}</td>
+            <td>{{ item.status }}</td>
+        </tr>
+    </table>
+</div>
+
+<app-users2/>

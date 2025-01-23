@@ -30,8 +30,23 @@ div{
   background-color: gainsboro;
   padding: 30px;
   text-align: center;
+  margin-bottom: 50px;
 }
 input,button{
   font-size: 25px;
   margin-right: 10px;
+}
+
+
+table{
+  border: 2px solid darkgrey;
+  border-collapse: collapse;
+  width: 100%;
+  font-size: 23px;
+}
+tr,td{
+  border: 5px solid lightgrey;
+  border-collapse: collapse;
+  padding: 10px;
+  background-color: lightcyan;
 }
